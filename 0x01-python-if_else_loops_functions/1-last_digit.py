@@ -3,11 +3,11 @@ import random
 number = random.randint(-10000, 10000)
 
 #Get the last digit
-last = int(int(repr(number)[-1]))
-
-#change last to -ve if number is -ve
 if number < 0:
-    last = -abs(last)
+    last = number % -10
+else:
+    last = number % 10
+
 print("Last digit of", number, "is", last, end=" ")
 if last > 5:
     print("and is greater than 5")
